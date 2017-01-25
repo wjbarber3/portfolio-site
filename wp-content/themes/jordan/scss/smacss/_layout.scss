@@ -28,7 +28,7 @@
 		input[type="checkbox"]{display:none;}
 		#actor-search{
 			#actor-input:focus+#actor-container{}
-			#actor-container{padding:15px;border:1px solid $white;height:175px;overflow:scroll;margin-top:4px;
+			#actor-container{padding:15px;border:1px solid $white;height:145px;overflow:scroll;margin-top:4px;
 				label{display:block;margin-bottom:8px;cursor:pointer;font-size:12px;
 					&:hover{color:$red;}
 				}
