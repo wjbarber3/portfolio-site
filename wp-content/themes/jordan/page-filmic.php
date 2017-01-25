@@ -39,7 +39,7 @@
 
       <form id="actor-search">
          <label for="actor-input"><i class="fa fa-user"></i>Pick 1+ Actor(s)</label>
-         <input id="actor-input" name="actor-input" type="text" onkeyup="" placeholder="type to narrow results...">
+         <input id="actor-input" name="actor-input" type="text" onkeyup="narrowActors()" placeholder="type to narrow results...">
          <div id="actor-container"></div>
          <input type="submit" onclick="actorSearch(event)" value="Update">
       </form>

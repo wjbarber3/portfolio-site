@@ -168,6 +168,20 @@
       });
    }
 
+   // Narrow Actor Results
+   function narrowActors() {
+
+      var actorInput = $('#actor-input').val().toLowerCase(),
+          actorLabel = $('#actor-container label');
+      actorLabel.hide();
+      actorLabel.each(function(){
+        var actorName = $(this).text();
+          if ( actorName.includes(actorInput) ) {
+            $(this).show();
+          }
+      })
+   }
+
    // Title Search
    function titleSearch() {
       $('.film').hide();
