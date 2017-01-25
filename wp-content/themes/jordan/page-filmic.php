@@ -3,7 +3,7 @@
 <head>
    <link href="wp-content/themes/jordan/font-awesome/font-awesome.min.css" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,900,900i" rel="stylesheet">
-   <link href="wp-content/themes/jordan/compiled_css/main.style.css" rel="stylesheet">
+   <link href="wp-content/themes/jordan/filmic/compiled_css/main.style.css" rel="stylesheet">
 </head>
 
 <body>

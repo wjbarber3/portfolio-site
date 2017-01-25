@@ -156,7 +156,6 @@
          actorName.each(function(){
             var cleanName = $(this).text().replace(/\s+/g, '-').toLowerCase(),
                 that = this;
-                console.log(cleanName);
             setTimeout(function(){
                if ( selectedActors.includes(cleanName) ) {
                   $(that).closest(".film").show();
