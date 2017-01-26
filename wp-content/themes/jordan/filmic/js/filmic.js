@@ -41,7 +41,31 @@
             $("#loader").hide();
          }, 500)
       });
+      window.location.hash = chosenDirector;
    }
+
+   $(window).on("popstate", function() {
+      if ( !window.location.hash ) {
+         location.reload();
+      } else {
+         $("#film-grid").empty();
+         $("#actor-container").empty();
+         $("#loader").show();
+         $(".filmic-page.active").removeClass("active").next().addClass("active");
+         var chosenDirector = window.location.hash.substr(1),
+             query = firebase.database().ref("Films/" + chosenDirector );
+             $("h1#director-name").text(chosenDirector);
+         query.once("value")
+         .then(function(snapshot) {
+            var data = snapshot.val();
+            setTimeout(function() {
+               buildFilms(data);
+               buildActorInput(data);
+               $("#loader").hide();
+            }, 500)
+         });
+      }
+   })
 
    // Build out the films
    function buildFilms(films) {
@@ -86,11 +110,13 @@
       $("#film" + i).find('.film-year').append(yearSpan);
    }
 
+   // Append the links
    function appendLink(films) {
       var filmLink = $('a.film-link');
       filmLink.prop("href", "http://www.imdb.com/title/" + films[i].id);
    }
 
+   // Add poster images
    function showImage(films) {
       var filmTitle = films[i].Title,
           cleanTitle = filmTitle.replace(/\s+/g, '-').toLowerCase();
@@ -112,7 +138,7 @@
       })
       uniqueActorArray.forEach(function(actorName, index){
          var cleanName = actorName.replace(/\s+/g, '-').toLowerCase();
-         $("#actor-container").append("<input id='actor" + index + "' type='checkbox' value='" + cleanName + "'><label for='actor" + index + "'>" + actorName + "</label>");
+         $("#actor-container").append("<div class='checkbox'><input id='actor" + index + "' type='checkbox' value='" + cleanName + "'><label for='actor" + index + "'>" + actorName + "</label></div>");
       })
    }
 
@@ -170,16 +196,11 @@
 
    // Narrow Actor Results
    function narrowActors() {
-
-      var actorInput = $('#actor-input').val().toLowerCase(),
-          actorLabel = $('#actor-container label');
-      actorLabel.hide();
-      actorLabel.each(function(){
-        var actorName = $(this).text();
-          if ( actorName.includes(actorInput) ) {
-            $(this).show();
-          }
-      })
+      var actorInput = $('#actor-input').val().toLowerCase();
+      $("#actor-container").find(".checkbox").hide()
+      .filter(function() {
+      return this.innerText.toLowerCase().indexOf(actorInput) > -1;
+      }).show();
    }
 
    // Title Search
@@ -207,8 +228,6 @@
       selectedYear.prop("selected", false);
    }
 
-   // Removed Selected Actors
-
    // Reset Title Search
    function resetTitle() {
       var titleSearch = $("#title");
@@ -219,6 +238,7 @@
    function resetActors() {
       var actorCheckbox = $("#actor-search input");
       actorCheckbox.prop("checked", false);
+      $("#actor-input").val('').trigger('keyup');
    }
 
    // Clear Search
@@ -230,6 +250,7 @@
       $('.film').show();
    }
 
+   // Page Routing Object
    PageRoute = {
         currentPage: '.filmic-page.active',
         directorLink: '#director-list li a',
@@ -239,4 +260,4 @@
         updatePage: function() {
             $(this.currentPage).removeClass("active").next().addClass("active");
         }
-    }
+   }

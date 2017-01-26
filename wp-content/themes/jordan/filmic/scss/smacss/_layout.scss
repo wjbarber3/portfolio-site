@@ -13,7 +13,10 @@
 .filmic-page{display:none;height:calc(100vh - 75px);width:100vw;
 	&.active{display:block;}
 	.filmic-sidebar{width:220px;background-color:$black3;height:100%;float:left;display:inline-block;padding:40px 30px;overflow:scroll;
-		h2{color:$white;margin-bottom:30px;font-size:20px;}
+		h2{color:$white;margin-bottom:5px;font-size:20px;}
+		.back{font-weight:900;display:block;font-size:13px;margin-bottom:30px;
+			i{margin-right:4px;}
+		}
 		label{color:$white;font-size:16px;font-weight:900;
 			i{color:$gold;margin-right:8px;}
 		}
@@ -50,7 +53,9 @@
 	}
 	.filmic-content{width:calc(100% - 220px);float:left;display:inline-block;background-color:$offwhite;height:100%;}
 	.filmic-heading{width:100%;background-color:$white;padding:30px;height:104px;position:relative;
-		a{text-decoration:underline;@include nun-bold-it;}
+		a{text-decoration:underline;@include nun-bold-it;
+			&:hover{color:$black;}
+		}
 		sup{font-size:18px;margin-left:10px;}
 	}
 	#loader{height:4px;background:$red;position:absolute;bottom:0;left:0;animation:expand-loader .5s ease-in-out;}
