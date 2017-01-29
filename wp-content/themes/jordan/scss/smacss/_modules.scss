@@ -6,32 +6,22 @@
 	p{color:$white;}
 }
 
+canvas{position:absolute;width:100vw;height:100vh;}
+
 /* ==================== */
-/* === FILM CARD === */
+/* === OPENING === */
 /* ==================== */
 
-.film-card{height:auto;margin-bottom:20px;
-	.film-heading{background-color:$black3;padding:10px;border-bottom:3px solid $lightgrey;position:relative;
-		h1{color:$white;}
-	}
-	.film-info{padding:10px;background-color:$white;min-height:235px;}
-	.film-link{width:33px;height:23.5px;position:absolute;background-image:url('../filmic/img/film-link.png');background-size:cover;right:10px;bottom:-11px;
-		&:hover{opacity:.9;}
-	}
-	.film-poster{width:100px;margin-right:15px;width:40%;display:inline-block;}
-	.film-details{display:inline-block;vertical-align:top;width:55%;
-		h2{font-size:15px;font-weight:200;
-			&.actor{display:inline;line-height:20px;
-				&::after{content:", ";}
-				&:last-of-type::after{content:"";}
-			}
-		}
-		span h2{font-weight:900;line-height:18px;margin-top:9px;}
-	}
-	.sep{height:1px;width:135px;background:$red;margin-bottom:6px;margin-top:4px;}
-	.film-year{margin-top:10px;
-		h2,h4{display:inline;}
-		h4{@include nun-light-it;font-size:14px;}
+.opening{width:100vw;height:100vh;background-color:rgba($black, .7);/*-webkit-animation:background-pulse 5s infinite;*/position:relative;z-index:1;border:4px solid $lightgrey;border-top:6px solid $lightgrey;
+	.headline{height:200px;position:absolute;top:48%;@include transform(translateY(-50%));left:10%;}
+	h1{
+		&:first-of-type{color:$white;}
+		&:nth-of-type(2){color:$gold;}
+		&:last-of-type{color:$red;}
+		span{color:$black3;}
+		&:not(.large){font-weight:200;}
 	}
 }
+
+
 

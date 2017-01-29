@@ -41,31 +41,31 @@
             $("#loader").hide();
          }, 500)
       });
-      window.location.hash = chosenDirector;
+      // window.location.hash = chosenDirector;
    }
 
-   $(window).on("popstate", function() {
-      if ( !window.location.hash ) {
-         location.reload();
-      } else {
-         $("#film-grid").empty();
-         $("#actor-container").empty();
-         $("#loader").show();
-         $(".filmic-page.active").removeClass("active").next().addClass("active");
-         var chosenDirector = window.location.hash.substr(1),
-             query = firebase.database().ref("Films/" + chosenDirector );
-             $("h1#director-name").text(chosenDirector);
-         query.once("value")
-         .then(function(snapshot) {
-            var data = snapshot.val();
-            setTimeout(function() {
-               buildFilms(data);
-               buildActorInput(data);
-               $("#loader").hide();
-            }, 500)
-         });
-      }
-   })
+   // $(window).on("popstate", function() {
+   //    if ( !window.location.hash ) {
+   //       location.reload();
+   //    } else {
+   //       $("#film-grid").empty();
+   //       $("#actor-container").empty();
+   //       $("#loader").show();
+   //       $(".filmic-page.active").removeClass("active").next().addClass("active");
+   //       var chosenDirector = window.location.hash.substr(1),
+   //           query = firebase.database().ref("Films/" + chosenDirector );
+   //           $("h1#director-name").text(chosenDirector);
+   //       query.once("value")
+   //       .then(function(snapshot) {
+   //          var data = snapshot.val();
+   //          setTimeout(function() {
+   //             buildFilms(data);
+   //             buildActorInput(data);
+   //             $("#loader").hide();
+   //          }, 500)
+   //       });
+   //    }
+   // })
 
    // Build out the films
    function buildFilms(films) {

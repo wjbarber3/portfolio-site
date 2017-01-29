@@ -33,7 +33,7 @@
       
       <h2>Filter Films</h2>
       
-      <a class="back" href=""><i class="fa fa-arrow-circle-o-left"></i>Back to director list</a>
+      <!-- <a class="back" href="/filmic"><i class="fa fa-arrow-circle-o-left"></i>Back to director list</a> -->
 
       <label for="title"><i class="fa fa-edit"></i>Title</label>
       <input id="title" name="title" type="text" onkeyup="titleSearch()" placeholder="start typing...">
