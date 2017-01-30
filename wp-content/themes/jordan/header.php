@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon-precomposed.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:300,800" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
@@ -20,7 +20,8 @@
 
 <header>
     <div class="main-wrap">
-        <a class="logo" href="/"><svg width="54" height="55"><use xlink:href="#logo"></use></svg></a>
-        <i class="mobile-menu-trigger fa fa-bars"></i>
+        <!-- <a class="logo" href="/"><svg width="54" height="55"><use xlink:href="#logo"></use></svg></a> -->
+        <a class="logo" href="/"><img width="54" height="56" src="/wp-content/themes/jordan/img/logo.png" /></a>
+        <!-- <i class="mobile-menu-trigger fa fa-bars"></i> -->
     </div>
 </header>

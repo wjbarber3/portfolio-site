@@ -12,7 +12,5 @@ $lightgrey:	#D4D4D4;
 
 
 // Fonts === */
-@mixin nun-light{font-family:"nunito",sans-serif;font-style:normal;font-weight:200;}
-@mixin nun-light-it{font-family:"nunito",sans-serif;font-style:italic;font-weight:200;}
-@mixin nun-bold{font-family:"nunito",sans-serif;font-style:normal;font-weight:900;}
-@mixin nun-bold-it{font-family:"nunito",sans-serif;font-style:italic;font-weight:900;}
+@mixin exo-light{font-family:"Exo",sans-serif;font-style:normal;font-weight:300;}
+@mixin exo-bold{font-family:"Exo",sans-serif;font-style:normal;font-weight:800;}

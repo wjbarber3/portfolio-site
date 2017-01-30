@@ -4,7 +4,7 @@
 
 header{position:fixed;height:92px;width:100%;z-index:2;
 	.main-wrap{width:98%;position:relative;margin:0 auto;height:92px;}
-	a, .mobile-menu-trigger{@include vert-align(50%,-50%);display:inline-block;}
+	a, .mobile-menu-trigger{@include vert-align(50%,-50%);display:inline-block;color:$white;}
 	.mobile-menu-trigger{float:right;}
 }
 
