@@ -22,6 +22,17 @@
     <div class="main-wrap">
         <!-- <a class="logo" href="/"><svg width="54" height="55"><use xlink:href="#logo"></use></svg></a> -->
         <a class="logo" href="/"><img width="54" height="56" src="/wp-content/themes/jordan/img/logo.png" /></a>
-        <!-- <i class="mobile-menu-trigger fa fa-bars"></i> -->
+        <nav>
+            <li><a href="">About<i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="">Coding Practices</a></li>
+                    <li><a href="">Awards</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Blog<i class="fa fa-caret-down"></i></a></li>
+            <li><a href="">Web Things<i class="fa fa-caret-down"></i></a></li>
+        </nav>
     </div>
 </header>
