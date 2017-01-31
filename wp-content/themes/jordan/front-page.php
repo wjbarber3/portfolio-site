@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <div class="opening">
+	<div class="big-logo-container"></div>
 	<div class="headline">
 		<h1 class="large">Jordan Barber</h1>
 		<h2>Front End Developer <span>/</span></h2>
