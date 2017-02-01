@@ -21,13 +21,20 @@
 	</div>
 	<div class="companies">
 		<p>Grateful to have worked with the following companies</p>
-		<img width="115" height="16" src="/wp-content/themes/jordan/img/company-logos/tesla.png" alt="">
-		<img width="104" height="27" src="/wp-content/themes/jordan/img/company-logos/solarcity.png" alt="">
-		<img width="94" height="28" src="/wp-content/themes/jordan/img/company-logos/crayola.png" alt="">
-		<img width="65" height="37" src="/wp-content/themes/jordan/img/company-logos/ally.png" alt="">
-		<img width="123" height="32" src="/wp-content/themes/jordan/img/company-logos/uk.png" alt="">
-		<img width="185" height="41" src="/wp-content/themes/jordan/img/company-logos/fsu.png" alt="">
-		<img width="87" height="36" src="/wp-content/themes/jordan/img/company-logos/philadelphia.png" alt="">
+		<!-- <img width="115" height="16" src="/wp-content/themes/jordan/img/company-logos/tesla.png" alt=""> -->
+		<svg width="115" height="16"><use xlink:href="#tesla"></use></svg>
+		<!-- <img width="104" height="27" src="/wp-content/themes/jordan/img/company-logos/solarcity.png" alt=""> -->
+		<svg width="104" height="27"><use xlink:href="#solarcity"></use></svg>
+		<!-- <img width="94" height="28" src="/wp-content/themes/jordan/img/company-logos/crayola.png" alt=""> -->
+		<svg width="94" height="28"><use xlink:href="#crayola"></use></svg>
+		<!-- <img width="65" height="37" src="/wp-content/themes/jordan/img/company-logos/ally.png" alt=""> -->
+		<svg width="65" height="37"><use xlink:href="#ally"></use></svg>
+		<!-- <img width="123" height="32" src="/wp-content/themes/jordan/img/company-logos/uk.png" alt=""> -->
+		<svg width="123" height="32"><use xlink:href="#uk"></use></svg>
+		<!-- <img width="185" height="41" src="/wp-content/themes/jordan/img/company-logos/fsu.png" alt=""> -->
+		<svg width="185" height="41"><use xlink:href="#fsu"></use></svg>
+		<!-- <img width="87" height="36" src="/wp-content/themes/jordan/img/company-logos/philadelphia.png" alt=""> -->
+		<svg width="87" height="36"><use xlink:href="#philadelphia"></use></svg>
 	</div>
 </div>
 

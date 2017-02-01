@@ -31,8 +31,18 @@
                 </ul>
             </li>
             <li><a href="">Work</a></li>
-            <li><a href="">Blog<i class="fa fa-caret-down"></i></a></li>
-            <li><a href="">Web Things<i class="fa fa-caret-down"></i></a></li>
+            <li><a href="">Blog<i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="">Web</a></li>
+                    <li><a href="">Life</a></li>
+                    <li><a href="">Film</a></li>
+                </ul>
+            </li>
+            <li><a href="">Web Things<i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="/filmic">KinoFiles</a></li>
+                </ul>
+            </li>
         </nav>
     </div>
 </header>
