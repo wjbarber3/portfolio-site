@@ -9,7 +9,7 @@
 		<!-- <h2>Auteur Film Writer</h2> -->
 		<h2>Cinephile</h2>
 		<a href="#" class="main-btn">About</a>
-		<a href="#" class="main-btn">Featured Work</a>
+		<a href="#" class="main-btn" onclick="customScroll(event, featured);">Featured Work</a>
 		<a href="/filmic" class="main-btn">KinoFiles</a>
 	</div>
 	<div class="social">
@@ -21,21 +21,38 @@
 	</div>
 	<div class="companies">
 		<p>Grateful to have worked with the following companies</p>
-		<!-- <img width="115" height="16" src="/wp-content/themes/jordan/img/company-logos/tesla.png" alt=""> -->
 		<svg width="115" height="16"><use xlink:href="#tesla"></use></svg>
-		<!-- <img width="104" height="27" src="/wp-content/themes/jordan/img/company-logos/solarcity.png" alt=""> -->
 		<svg width="104" height="27"><use xlink:href="#solarcity"></use></svg>
-		<!-- <img width="94" height="28" src="/wp-content/themes/jordan/img/company-logos/crayola.png" alt=""> -->
 		<svg width="94" height="28"><use xlink:href="#crayola"></use></svg>
-		<!-- <img width="65" height="37" src="/wp-content/themes/jordan/img/company-logos/ally.png" alt=""> -->
 		<svg width="65" height="37"><use xlink:href="#ally"></use></svg>
-		<!-- <img width="123" height="32" src="/wp-content/themes/jordan/img/company-logos/uk.png" alt=""> -->
 		<svg width="123" height="32"><use xlink:href="#uk"></use></svg>
-		<!-- <img width="185" height="41" src="/wp-content/themes/jordan/img/company-logos/fsu.png" alt=""> -->
 		<svg width="185" height="41"><use xlink:href="#fsu"></use></svg>
-		<!-- <img width="87" height="36" src="/wp-content/themes/jordan/img/company-logos/philadelphia.png" alt=""> -->
 		<svg width="87" height="36"><use xlink:href="#philadelphia"></use></svg>
 	</div>
+</div>
+
+<div id="featured">
+	<div class="main-wrap">
+		<div class="col-sm-12 image-container mobile-only">
+			<img src="/wp-content/themes/jordan/img/kentucky-mockup-angle-1200-opt.png" alt="">
+		</div>
+		<div class="col-md-6 description">
+			<h2>University of Kentucky, Academic Exploration Tool</h2>
+			<h2>A Tough Decision Made Simple</h2>
+			<h3><span>Role:</span> Front End Developer, UI/UX Designer</h3>
+			<p class="award-title">Education Digital Marketing Awards</p>
+			<p><i class="fa fa-trophy"></i><span>Gold Medal </span>- Admissions Website</p>
+			<p><i class="fa fa-trophy"></i><span>Bronze Medal </span>- Institution Website</p>
+			<p class="award-title">UCDA Design Conference</p>
+			<p><i class="fa fa-trophy"></i><span>Excellence Award </span>- Admissions Website</p>
+			<a href="#" class="secondary-btn">See the case study</a>
+		</div>
+		<div class="col-sm-6 image-container mobile-hide">
+			<img src="/wp-content/themes/jordan/img/kentucky-mockup-angle-1200-opt.png" alt="">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<svg class="featured-ribbon" width="150" height="150"><use xlink:href="#featured-ribbon"></use></svg>
 </div>
 
 <?php get_footer(); ?>

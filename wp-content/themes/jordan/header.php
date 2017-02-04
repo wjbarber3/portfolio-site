@@ -26,8 +26,7 @@
             <li><a href="">About<i class="fa fa-caret-down"></i></a>
                 <ul>
                     <li><a href="">Coding Practices</a></li>
-                    <li><a href="">Awards</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="">Accolades</a></li>
                 </ul>
             </li>
             <li><a href="">Work</a></li>
@@ -44,5 +43,6 @@
                 </ul>
             </li>
         </nav>
+        <a class="mobile-trigger" href="#"><i class="fa fa-bars"></i></a>
     </div>
 </header>

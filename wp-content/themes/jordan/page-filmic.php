@@ -10,7 +10,7 @@
 
 <div class="notification">
    <div class="main-wrap">
-      <p>I’ve been wanting to play aroud with Google Firebase.  I’ve also been wanting to combine my passion for web dev with my passion for auteur cinema. Below is the combination of those two. Choose a director and then see which actors they have collaborated with among other things. Poster images courtesy of <a target="blank" href="http://www.imdb.com">IMDB</a>.</p>
+      <p>I’ve been wanting to play aroud with Google Firebase.  I’ve also been wanting to combine my passion for web dev with my passion for auteur cinema. Below is the combination of those two. Choose a director and then see which actors they have collaborated with among other things. This is a work in progress, directors will be added weekly. Poster images courtesy of <a target="blank" href="http://www.imdb.com">IMDB</a>.</p>
    </div>
 </div>
 

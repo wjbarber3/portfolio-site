@@ -2,13 +2,13 @@
 /* === HEADER ======= */
 /* ================== */
 
-header{position:fixed;height:92px;width:100%;z-index:2;
+header{position:fixed;height:92px;width:100%;z-index:2;transition:all .2s ease-in-out;
 	.main-wrap{width:98%;position:relative;margin:0 auto;height:92px;}
 	a, nav{@include vert-align(50%,-50%);display:inline-block;color:$white;}
 	nav{float:right;
 		li{display:inline-block;height:25px;position:relative;
 			&:last-of-type a{padding-right:0;border-right:none;}
-			ul{display:none;position:absolute;transition:all .2s ease-in-out;background-color:rgba($red,.9);background-size:cover;padding:25px 29px;top:25px;
+			ul{display:none;position:absolute;width:100%;transition:all .2s ease-in-out;background-color:rgba($red,.9);background-size:cover;padding:25px 29px;top:25px;
 				li{display:block;margin-bottom:15px;height:auto;
 					&:last-of-type{margin-bottom:0px;}
 					a{border:none;padding:0;height:auto;top:inherit;@include transform(none);
@@ -19,12 +19,24 @@ header{position:fixed;height:92px;width:100%;z-index:2;
 			&:hover ul{display:block;}
 		}
 		a{padding:5px 30px 0;font-size:16px;line-height:18px;height:25px;border-right:1px solid $gold;font-weight:800;position:relative;
-			&:hover{color:$gold;}
+			&:hover{color:$gold;
+				&:after, &:before{width:calc(100% - 60px);left:0;}
+			}
 			i{margin-left:10px;}
+			&:after, &:before{content:"";position:absolute;bottom:0;right:0;left:0;margin:auto;width:0;height:3px;z-index:2;}
+			&:before{background-color:$gold;transition:all .25s cubic-bezier(.694,.048,.335,1) .15s;}
+			&:after{background-color:$red;transition:all .25s cubic-bezier(.694,.048,.335,1);}
 		}
 	}
 	.logo{transition:all .2s ease-in-out;
 		&:hover{opacity:.8;}
+		img{transition:all .1s ease-in-out;}
+	}
+	.mobile-trigger{display:none;float:right;font-size:30px;}
+	&.scrolled{background-color:rgba($gold, .8);height:50px;border-bottom:1px solid $red;
+		.main-wrap{height:50px;}
+		.logo img{width:34px;height:35px;}
+		nav li ul{top:37px;}
 	}
 }
 
@@ -38,7 +50,7 @@ header{position:fixed;height:92px;width:100%;z-index:2;
 
 @keyframes bg-zoom{
 	0%   {background-size: 130%;}
-	100%   {background-size: 100%;}
+	100%   {background-size: cover;}
 }
 
 @keyframes bg-logo-zoom{

@@ -1,3 +1,36 @@
 /* ================== */
 /* === BASE ========= */
 /* ================== */
+
+@include bp(mobile) {
+	h2{font-size:28px;line-height:38px;}
+	h3{font-size:16px;line-height:26px;}
+	.mobile-only{display:block;}
+	.mobile-hide{display:none;}
+	.secondary-btn{width:100%;text-align:center;}
+}
+
+/* ================== */
+/* === HEADER ======= */
+/* ================== */
+
+header {
+	@include bp(mobile) {
+		nav{display:none;}
+		.mobile-trigger{display:inline-block;}
+	}
+}
+
+/* ================== */
+/* === FEATURED ===== */
+/* ================== */
+
+#featured {
+	@include bp(mobile) {
+		padding:60px 0;
+		.description{padding-left:initial;margin-top:30px;opacity:1;
+			h2:last-of-type{font-size:24px;line-height:34px;}
+		}
+		.image-container img{position:relative;right:0;}
+	}
+}

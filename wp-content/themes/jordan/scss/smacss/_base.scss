@@ -5,10 +5,10 @@
 h1,h2,h3,h4,p,a,li,input,label{font-family:'Exo',sans-serif;color:$black;font-weight:300;color:$white;}
 h1.large{font-size:90px;font-weight:900;line-height:90px;}
 h1{@include exo-light;font-size:47px;line-height:50px;}
-h2{font-size:33px;line-height:46px;}
-h3{font-size:23px;line-height:35px;}
+h2{font-size:38px;line-height:44px;}
+h3{font-size:18px;line-height:28px;}
 h4{font-size:16px;line-height:28px;}
-p,li{font-size:12px;line-height:24px;}
+p,li{font-size:15px;line-height:24px;}
 ul,ol,li{list-style:none;}
 a{text-decoration:none;transition:all .2s ease-in-out;color:$red;
 	&:hover{color:$black;text-decoration:none;}
@@ -24,6 +24,10 @@ sup {vertical-align:super;font-size:8px;}
 	&:hover{color:$black;
 		i.main-btn-icon{color:$black;border-color:$black;}
 	}
+}
+.secondary-btn{font-size:18px;position:relative;font-weight:800;color:$white;display:inline-block;background-color:$black;padding:15px 25px;border-left:4px solid $red;
+	&:hover{background-color:$gold;color:$white;}
+	&:after{content:'';position:absolute;width:24px;height:24px;right:-12px;top:50%;background-image:url('../img/button-arrow.png');background-size: 24px 24px;@include transform(translateY(-50%));}
 }
 // i.main-btn-icon{text-align:center;color:$red;border-radius:40px;border:2px solid $red;margin-right:10px;width:25px;height:25px;padding:4px 0 0 3px;transition:.2s ease-in-out;}
 
