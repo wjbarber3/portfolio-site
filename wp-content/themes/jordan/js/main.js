@@ -48,13 +48,58 @@
         }
     }
 
+    Quotes = {
+        quote: '.quote',
+        leftButton: '.control-left',
+        rightButton: '.control-right',
+        nameControl: '.name-controls li',
+        init: function() {
+            $(this.leftButton).click(this.moveLeft.bind(this));
+            $(this.rightButton).click(this.moveRight.bind(this));
+        },
+        moveRight: function(e) {
+            e.preventDefault();
+            var activeQuote = $('.quote.active'),
+                nextUp = activeQuote.next(),
+                activeName = $('.name-controls li.active'),
+                nextName = activeName.next(),
+                lastQuote = $(this.quote).last();
+            activeQuote.removeClass("active");
+            nextUp.addClass("active");
+            activeName.removeClass("active");
+            nextName.addClass("active");
+            $(this.leftButton).removeClass("disabled");
+            if ( lastQuote.hasClass("active") ) {
+                $(this.rightButton).addClass("disabled");
+            }
+        },
+        moveLeft: function(e) {
+            e.preventDefault();
+            var activeQuote = $('.quote.active'),
+                nextUp = activeQuote.prev(),
+                activeName = $('.name-controls li.active'),
+                nextName = activeName.prev(),
+                firstQuote = $(this.quote).first();
+            activeQuote.removeClass("active");
+            nextUp.addClass("active");
+            activeName.removeClass("active");
+            nextName.addClass("active");
+            console.log(firstQuote);
+            $(this.rightButton).removeClass("disabled");
+            if ( firstQuote.hasClass("active") ) {
+                $(this.leftButton).addClass("disabled");
+            }
+        }
+    }
+
     $(document).ready(function() {
         Header.init();
         ScrollEvents.init();
+        Quotes.init();
         $(".interests").typed({
-            strings: ["Cinephile.", "Avid Hiker.", "Wannabe Yogi."],
-            typeSpeed: 60,
-            loop: true,
+            strings: ["Cinephile.", "<strike>Marathon</strike> Runner.", "Avid Hiker/Cyclist.", "Wannabe Yogi.", "Passionate Developer."],
+            typeSpeed: 50,
+            // loop: true,
             showCursor: true
         });
     })

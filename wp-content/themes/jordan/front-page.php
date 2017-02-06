@@ -4,10 +4,10 @@
 	<div class="big-logo-container"></div>
 	<div class="headline">
 		<h1 class="large">Jordan Barber</h1>
-		<h2>Front End Developer <span>/</span></h2>
-		<h2>Digital Designer <span>/</span></h2>
+		<h2>Front End Developer<span>,</span></h2>
+		<h2>Digital Designer<span>,</span></h2>
 		<!-- <h2>Auteur Film Writer</h2> -->
-		<h2 class="interests"></h2>
+		<h2>and... <span class="interests"></span></h2>
 		<br>
 		<a href="#" class="main-btn">About</a>
 		<a href="#" class="main-btn" onclick="customScroll(event, featured);">Featured Work</a>
@@ -84,15 +84,17 @@
 	</div>
 	<div class="quotes">
 		<div class="controls">
-			<a class="control-left" href=""><i class="fa fa-angle-left"></i></a>
+			<a class="control-left disabled" href=""><i class="fa fa-angle-left"></i></a>
 			<a class="control-right" href=""><i class="fa fa-angle-right"></i></a>
 		</div>
-		<p class="quote">Jordan is the complete package. He’s smart. He’s talented.
+		<p class="quote active">Jordan is the complete package. He’s smart. He’s talented.
 		He writes clean code that is expertly constructed and follows
 		best practices. He has the rare combination of elite developer
 		skills and an engaging, friendly, thoughtful personality. He hits
 		the ground running, and our clients love him. On a scale of 1 to 10,
-		I’d rank him about a 12.</p>
+		I’d rank him about a 12. <span>Max Donnelly<br>Owner, Chronos Interactive</span></p>
+		<p class="quote">Jordan is one of the most talented and hard working front end developers I’ve had the pleasure to work with. His attention to detail is matched only by his passion for the work. He always pushes the boundaries technically and creatively — taking a good idea and making it great. I only wish I got to work with him more.<span>Mark Gerardot<br>Creative Director, Up&amp;Up Agency</span></p>
+		<p class="quote">This is a third quote.</p>
 		<div class="name-controls">
 			<li class="active"><a href="#"><span>Max Donnelly,</span>Chronos Interactive</a></li>
 			<li><a href="#"><span>Mark Gerardot,</span>Up&amp;Up Agency</a></li>
