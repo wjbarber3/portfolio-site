@@ -51,6 +51,12 @@
     $(document).ready(function() {
         Header.init();
         ScrollEvents.init();
+        $(".interests").typed({
+            strings: ["Cinephile.", "Avid Hiker.", "Wannabe Yogi."],
+            typeSpeed: 60,
+            loop: true,
+            showCursor: true
+        });
     })
 
 })(jQuery);
@@ -61,3 +67,4 @@ function customScroll(e, element) {
         scrollTop: jQuery(element).offset().top + 400
     }, 1000);
 }
+

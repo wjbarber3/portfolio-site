@@ -20,7 +20,7 @@ sup {vertical-align:super;font-size:8px;}
 /* === BUTTONS ====== */
 /* ================== */
 
-.main-btn{font-weight:800;color:$black;font-size:18px;display:inline-block;border-bottom:2px solid $red;padding:2px 0;
+.main-btn{font-weight:800;color:$black;font-size:18px;display:inline-block;border-bottom:3px solid $red;padding:2px 0;
 	&:hover{color:$black;
 		i.main-btn-icon{color:$black;border-color:$black;}
 	}

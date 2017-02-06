@@ -7,7 +7,8 @@
 		<h2>Front End Developer <span>/</span></h2>
 		<h2>Digital Designer <span>/</span></h2>
 		<!-- <h2>Auteur Film Writer</h2> -->
-		<h2>Cinephile</h2>
+		<h2 class="interests"></h2>
+		<br>
 		<a href="#" class="main-btn">About</a>
 		<a href="#" class="main-btn" onclick="customScroll(event, featured);">Featured Work</a>
 		<a href="/filmic" class="main-btn">KinoFiles</a>
@@ -53,6 +54,52 @@
 		<div class="clearfix"></div>
 	</div>
 	<svg class="featured-ribbon" width="150" height="150"><use xlink:href="#featured-ribbon"></use></svg>
+</div>
+
+<div id="about">
+	<div class="description">
+		<p class="bg-text">Abou</p>
+		<div class="box">
+			<h2>A little about me...</h2>
+			<p>I am a self-taught developer and academically trained film
+			theorist and historian.  I made Front End Development my
+			career 5 years ago and have never looked back.  All the while, 
+			maintaining an interest in the study of film history as a looking
+			glass into society. While most of my time goes into my career and
+			staying savvy with the latest trends, I hope to use this site’s blog
+			as an outlet to continue writing and thinking about film as the
+			preeminent art of our generation and the most impactul
+			form of artisitic expression in existence</p>
+			<div class="dev-icons">
+				<svg width="23" height="23"><use xlink:href="#javascript"></use></svg>
+				<svg width="26" height="23"><use xlink:href="#css"></use></svg>
+				<svg width="21" height="23"><use xlink:href="#html"></use></svg>
+				<svg width="31" height="23"><use xlink:href="#sass"></use></svg>
+				<svg width="22" height="23"><use xlink:href="#git"></use></svg>
+				<svg width="60" height="23"><use xlink:href="#node"></use></svg>
+				<svg width="23" height="23"><use xlink:href="#wordpress"></use></svg>
+				<svg width="22" height="23"><use xlink:href="#drupal"></use></svg>
+			</div>
+		</div>
+	</div>
+	<div class="quotes">
+		<div class="controls">
+			<a class="control-left" href=""><i class="fa fa-angle-left"></i></a>
+			<a class="control-right" href=""><i class="fa fa-angle-right"></i></a>
+		</div>
+		<p class="quote">Jordan is the complete package. He’s smart. He’s talented.
+		He writes clean code that is expertly constructed and follows
+		best practices. He has the rare combination of elite developer
+		skills and an engaging, friendly, thoughtful personality. He hits
+		the ground running, and our clients love him. On a scale of 1 to 10,
+		I’d rank him about a 12.</p>
+		<div class="name-controls">
+			<li class="active"><a href="#"><span>Max Donnelly,</span>Chronos Interactive</a></li>
+			<li><a href="#"><span>Mark Gerardot,</span>Up&amp;Up Agency</a></li>
+			<li><a href="#"><span>Andrew Roberts,</span>The Winter Group</a></li>
+		</div>
+	</div>
+	<div class="clearfix"></div>
 </div>
 
 <?php get_footer(); ?>
