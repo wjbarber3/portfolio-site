@@ -7,10 +7,12 @@ $red:		#FF1940;
 $gold:		#98A68A;
 $offwhite:	#EFEFEF;
 $lightgrey:	#D4D4D4;
+$blue:		#19FFD8;
 
 // Secondar Colors === */
 
 
 // Fonts === */
 @mixin exo-light{font-family:"Exo",sans-serif;font-style:normal;font-weight:300;}
+@mixin exo-italic{font-family:"Exo",sans-serif;font-style:italic;font-weight:300;}
 @mixin exo-bold{font-family:"Exo",sans-serif;font-style:normal;font-weight:800;}

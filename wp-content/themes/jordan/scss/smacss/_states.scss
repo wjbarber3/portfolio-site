@@ -3,6 +3,7 @@
 /* ================== */
 
 @include bp(mobile) {
+	h1.large{font-size:50px;line-height:52px;}
 	h2{font-size:28px;line-height:38px;}
 	h3{font-size:16px;line-height:26px;}
 	.mobile-only{display:block;}
@@ -26,11 +27,44 @@ header {
 /* ================== */
 
 #featured {
-	@include bp(mobile) {
-		padding:60px 0;
+	@include bp(mobile) { padding:60px 0;
+		.main-wrap{top:initial;@include transform(none);}
 		.description{padding-left:initial;margin-top:30px;opacity:1;
 			h2:last-of-type{font-size:24px;line-height:34px;}
 		}
 		.image-container img{position:relative;right:0;}
+	}
+}
+
+/* ================== */
+/* === OPENING ====== */
+/* ================== */
+
+.opening{
+	@include bp(mobile){
+		.headline{top:34%;width:90%;}
+		.social{display:none;}
+		.big-logo-container{opacity:.3;}
+	}
+}
+
+/* ================== */
+/* === ABOUTE ======= */
+/* ================== */
+
+#about {
+	@include bp(mobile) {
+		.description, .quotes{width:100%;}
+		.description{
+			.box{ max-width: 85%;right: 0;left: 0;margin: auto;}
+			svg{margin:0 20px 20px 0;}
+		}
+		.quotes {
+			.quote{left:0;max-width:85%;right:0;margin:auto;
+				span{width:100%;}
+			}
+			.name-controls{display:none;}
+			&:before{width:50px;height:41px;left:14px;top:112px;}
+		}
 	}
 }

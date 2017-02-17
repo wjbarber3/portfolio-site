@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon-precomposed.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css?family=Exo:300,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:300,300i,800" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
@@ -30,13 +30,14 @@
                 </ul>
             </li>
             <li><a href="">Work</a></li>
-            <li><a href="">Blog<i class="fa fa-caret-down"></i></a>
+            <li><a href="" onclick="customScroll(event, contact);">Contact</a></li>
+            <!-- <li><a href="">Blog<i class="fa fa-caret-down"></i></a>
                 <ul>
                     <li><a href="">Web</a></li>
                     <li><a href="">Life</a></li>
                     <li><a href="">Film</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li><a href="">Web Things<i class="fa fa-caret-down"></i></a>
                 <ul>
                     <li><a href="/filmic">KinoFiles</a></li>

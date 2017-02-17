@@ -21,15 +21,21 @@ sup {vertical-align:super;font-size:8px;}
 /* ================== */
 
 .main-btn{font-weight:800;color:$black;font-size:18px;display:inline-block;border-bottom:3px solid $red;padding:2px 0;
-	&:hover{color:$black;
-		i.main-btn-icon{color:$black;border-color:$black;}
-	}
+	&:hover{color:$black;}
 }
-.secondary-btn{font-size:18px;position:relative;font-weight:800;color:$white;display:inline-block;background-color:$black;padding:15px 25px;border-left:4px solid $red;
+.secondary-btn{font-size:18px;position:relative;font-weight:800;color:$white;display:inline-block;background-color:$black;padding:15px 25px;border-left:4px solid $gold;
 	&:hover{background-color:$gold;color:$white;}
-	&:after{content:'';position:absolute;width:24px;height:24px;right:-12px;top:50%;background-image:url('../img/button-arrow.png');background-size: 24px 24px;@include transform(translateY(-50%));}
+	// &:after{content:'';position:absolute;width:24px;height:24px;right:-12px;top:50%;background-image:url('../img/button-arrow.png');background-size: 24px 24px;@include transform(translateY(-50%));}
 }
-// i.main-btn-icon{text-align:center;color:$red;border-radius:40px;border:2px solid $red;margin-right:10px;width:25px;height:25px;padding:4px 0 0 3px;transition:.2s ease-in-out;}
+
+/* ======================= */
+/* === GLOBAL FORMS ====== */
+/* ======================= */
+
+::-webkit-input-placeholder {color:$gold;}
+::-moz-placeholder {color:$gold;}
+:-ms-input-placeholder {color:$gold;}
+:-moz-placeholder {color:$gold;}
 
 /* ================== */
 /* === OTHER BASE === */

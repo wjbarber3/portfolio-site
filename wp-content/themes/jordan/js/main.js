@@ -17,7 +17,6 @@
             var scrollTop = $(window).scrollTop();
             if ( scrollTop > 0 && !$(this.header).hasClass("scrolled") ) {
                 $(this.header).addClass("scrolled");
-                console.log("one time");
             } else if ( scrollTop == 0 && $(this.header).hasClass("scrolled") ) {
                 $(this.header).removeClass("scrolled");
             }
@@ -96,12 +95,14 @@
         Header.init();
         ScrollEvents.init();
         Quotes.init();
-        $(".interests").typed({
-            strings: ["Cinephile.", "<strike>Marathon</strike> Runner.", "Avid Hiker/Cyclist.", "Wannabe Yogi.", "Passionate Developer."],
-            typeSpeed: 50,
-            // loop: true,
-            showCursor: true
-        });
+        $("#contact input").on("focus", function(){
+            $(this).parent('.ginput_container').siblings('.gfield_label').css("color", "#ff1940");
+            $(this).css("border-color", "#ff1940")
+        })
+        $("#contact input").on("focusout", function(){
+            $(this).parent('.ginput_container').siblings('.gfield_label').css("color", "#93a185");
+            $(this).css("border-color", "#93a185")
+        })
     })
 
 })(jQuery);
@@ -109,7 +110,17 @@
 function customScroll(e, element) {
     event.preventDefault();
     jQuery('html, body').animate({
-        scrollTop: jQuery(element).offset().top + 400
+        scrollTop: jQuery(element).offset().top - 48
     }, 1000);
+}
+
+function aboutMe() {
+    jQuery("h2.code").hide();
+    jQuery("h2.about").fadeIn();
+    jQuery(".interests3").typed({
+        strings: ["love to push creative boundaries.", "want to build things that make people's lives easier/better.",  "think that Frank Ocean's 'Blonde' is best music ever made.", "am a devout Cinephile.", "want to work with you."],
+        typeSpeed: 0,
+        showCursor: true
+    });
 }
 
