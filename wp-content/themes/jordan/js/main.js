@@ -107,10 +107,10 @@
 
 })(jQuery);
 
-function customScroll(e, element) {
+function customScroll(e, element, offset) {
     event.preventDefault();
     jQuery('html, body').animate({
-        scrollTop: jQuery(element).offset().top - 45
+        scrollTop: jQuery(element).offset().top - offset
     }, 1000);
 }
 

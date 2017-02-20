@@ -9,8 +9,8 @@
 		<h2 class="code" onclick="aboutMe();">$(<span class="code-red">this</span>).<span class="code-gold">on</span>("<span class="code-blue">click</span>", <span class="code-gold">aboutMe</span>());</h2>
 		<h2 class="about">I...<span class="interests3"></span></h2>
 		<br>
-		<a href="#" class="main-btn" onclick="customScroll(event, about);">About</a>
-		<a href="#" class="main-btn" onclick="customScroll(event, featured);">Featured Work</a>
+		<a href="#" class="main-btn" onclick="customScroll(event, about, 50);">About</a>
+		<a href="#" class="main-btn" onclick="customScroll(event, featured, 45);">Featured Work</a>
 		<a href="/filmic" class="main-btn">KinoFiles</a>
 	</div>
 	<div class="social">
