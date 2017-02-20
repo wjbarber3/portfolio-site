@@ -95,11 +95,11 @@
         Header.init();
         ScrollEvents.init();
         Quotes.init();
-        $("#contact input").on("focus", function(){
+        $("#contact input, #contact select, #contact textarea").on("focus", function(){
             $(this).parent('.ginput_container').siblings('.gfield_label').css("color", "#ff1940");
             $(this).css("border-color", "#ff1940")
         })
-        $("#contact input").on("focusout", function(){
+        $("#contact input, #contact select, #contact textarea").on("focusout", function(){
             $(this).parent('.ginput_container').siblings('.gfield_label').css("color", "#93a185");
             $(this).css("border-color", "#93a185")
         })
@@ -110,7 +110,7 @@
 function customScroll(e, element) {
     event.preventDefault();
     jQuery('html, body').animate({
-        scrollTop: jQuery(element).offset().top - 48
+        scrollTop: jQuery(element).offset().top - 45
     }, 1000);
 }
 

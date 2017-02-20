@@ -20,24 +20,11 @@
 
 <header>
     <div class="main-wrap">
-        <!-- <a class="logo" href="/"><svg width="54" height="55"><use xlink:href="#logo"></use></svg></a> -->
         <a class="logo" href="/"><img width="54" height="56" src="/wp-content/themes/jordan/img/logo.png" /></a>
         <nav>
-            <li><a href="">About<i class="fa fa-caret-down"></i></a>
-                <ul>
-                    <li><a href="">Coding Practices</a></li>
-                    <li><a href="">Accolades</a></li>
-                </ul>
-            </li>
+            <li><a href="">About</a></li>
             <li><a href="">Work</a></li>
             <li><a href="" onclick="customScroll(event, contact);">Contact</a></li>
-            <!-- <li><a href="">Blog<i class="fa fa-caret-down"></i></a>
-                <ul>
-                    <li><a href="">Web</a></li>
-                    <li><a href="">Life</a></li>
-                    <li><a href="">Film</a></li>
-                </ul>
-            </li> -->
             <li><a href="">Web Things<i class="fa fa-caret-down"></i></a>
                 <ul>
                     <li><a href="/filmic">KinoFiles</a></li>

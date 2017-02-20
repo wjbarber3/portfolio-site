@@ -10,8 +10,8 @@
 /* === OPENING === */
 /* ==================== */
 
-.opening{width:100vw;height:100vh;background: url("../img/home-bg.jpg") center no-repeat;background-position:center;position:relative;z-index:1;/*animation: bg-zoom 10s linear;*/background-size:cover;
-	.big-logo-container{position:absolute;width:100%;height:100%;background:url("../img/bg-logo.png") center  / 360px 370px no-repeat;}
+.opening{width:100vw;height:100vh;background: url("../img/home-bg.jpg") center no-repeat;background-position:center;position:relative;z-index:1;background-attachment:fixed;background-size:cover;
+	.big-logo-container{position:absolute;width:100%;height:100%;background:url("../img/bg-logo.png") center  / 360px 370px no-repeat;background-attachment:fixed;}
 	.headline{height:auto;position:absolute;top:48%;@include transform(translateY(-50%));width:80%;left:0;right:0;margin:auto;
 		h1{margin-bottom:2px;}
 		h2{
@@ -49,7 +49,7 @@
 /* === FEATURED === */
 /* ==================== */
 
-#featured {padding:100px 0;position:relative;height:100vh;
+#featured {padding:100px 0;position:relative;height:100vh;overflow:hidden;
 	.main-wrap{top:50%;@include transform(translateY(-50%));}
 	.description{padding-left:90px;padding-right:0px;opacity:0;transition:opacity .5s ease-in-out;
 		&.active{opacity:1;}
@@ -122,16 +122,18 @@
 		.top_label .gfield_label{color:$gold;transition:all .4s ease-in-out;margin-bottom:0px;}
 		#__lpform_input_1_2_icon{display:none;}
 		.datepicker{width:100% !important;}
-		textarea.large{height:100px;width:100%;-webkit-appearance:none;background:transparent;border: 1px solid #98A68A;padding:10px;color:$white;font-size:16px;}
+		select{transition:all .4s ease-in-out;}
+		textarea.large{height:100px;width:100%;-webkit-appearance:none;background:transparent;border: 1px solid #98A68A;padding:10px;color:$white;font-size:16px;transition:all .4s ease-in-out;}
 		input[type="submit"]{background:$red;-webkit-appearance:none;border:none;padding:15px 30px;font-weight:900;margin:0 auto;text-align:center;display:block;margin-top:30px;cursor:pointer;
 			&:hover{background:$gold;}
 		}
 		.ui-datepicker-header{background-color:$black !important;}
 		label.gfield_label + div.ginput_container {margin-top:0px;}
-		.top_label .gfield_error{width:33.33333%;height:40px;}
-		div.validation_error{text-align:center;border:none;color:$red;@include exo-bold;}
-		li.gfield.gfield_error{background-color:rgba($red, .5);border:none;}
-		select{background: transparent;color:$gold;border: 1px solid$gold;-webkit-appearance: none;border-radius: 0px;padding: 0 15px;height:30px;}
+		.top_label .gfield_error{width:33.33333%;height:40px;margin-top:-2px;}
+		div.validation_error{text-align:center;border:none;color:$red;@include exo-bold;display:none;}
+		li.gfield.gfield_error{background-color:transparent;border:none;}
+		li.gfield.gfield_error.gfield_contains_required div.gfield_description{margin:0;position:absolute;top:-20px;color:$red;}
+		select{background: transparent;color:$gold;border: 1px solid $gold;-webkit-appearance: none;border-radius: 0px;padding: 0 15px;height:30px;}
 	}
 }
 
