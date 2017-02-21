@@ -133,25 +133,32 @@
             $(this.container).append(this.loader);
             $(this.container).load("/case-study/");
             $(this.overlay).fadeIn();
+            $('body, html').css("overflowY", "hidden");
         },
         killGrid: function() {
             $(this.container).empty();
             $(this.overlay).fadeOut();
+            $('body, html').css("overflowY", "scroll");
         }
     }
 
     BackgroundAnimation = {
         backgroundLogo: '.big-logo-container',
+        headline: '.opening .headline',
+        companies: '.opening .companies',
         init: function() {
             $(window).scroll(this.animateLogo.bind(this));
         },
         animateLogo: function() {
             var scrollTop = $(window).scrollTop();
-                // converted = '.0' + scrollTop,
-                var opacity = Math.max(0, 1 - (scrollTop / 300));
-                // needed = 1 - converted;
-            $(this.backgroundLogo).css("transform", "scale("+opacity+")");
+                var opacity = Math.max(0, 1 - (scrollTop / 400)),
+                    scale = Math.max(0, 1 - (scrollTop / 1000)),
+                    companyOpacity = Math.max(0, 1 - (scrollTop / 700));
+            $(this.backgroundLogo).css("transform", "scale("+scale+")");
             $(this.backgroundLogo).css("opacity", opacity);
+            $(this.headline).css("opacity", opacity);
+            $(this.companies).css("opacity", companyOpacity);
+
         }
     }
 
@@ -174,19 +181,19 @@
 })(jQuery);
 
 function customScroll(e, element, offset) {
-    event.preventDefault();
+    e.preventDefault();
     jQuery('html, body').animate({
         scrollTop: jQuery(element).offset().top - offset
     }, 1000);
 }
 
-function aboutMe() {
-    jQuery("h2.code").hide();
-    jQuery("h2.about").fadeIn();
-    jQuery(".interests3").typed({
-        strings: ["love to push creative boundaries.", "want to build things that make people's lives easier/better.",  "think that Frank Ocean's 'Blonde' is best music ever made.", "am a devout Cinephile.", "want to work with you."],
-        typeSpeed: 0,
-        showCursor: true
-    });
-}
+// function aboutMe() {
+//     jQuery("h2.code").hide();
+//     jQuery("h2.about").fadeIn();
+//     jQuery(".interests3").typed({
+//         strings: ["love to push creative boundaries.", "want to build things that make people's lives easier/better.",  "think that Frank Ocean's 'Blonde' is best music ever made.", "am a devout Cinephile.", "want to work with you."],
+//         typeSpeed: 0,
+//         showCursor: true
+//     });
+// }
 

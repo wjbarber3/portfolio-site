@@ -49,7 +49,7 @@ header {
 }
 
 /* ================== */
-/* === ABOUTE ======= */
+/* === ABOUT ======== */
 /* ================== */
 
 #about {
@@ -66,5 +66,15 @@ header {
 			.name-controls{display:none;}
 			&:before{width:50px;height:41px;left:14px;top:112px;}
 		}
+	}
+}
+
+/* ================== */
+/* === CONTACT ====== */
+/* ================== */
+
+#contact {
+	@include bp(mobile) {height:auto;padding:60px 0;
+		.main-wrap{top:initial;@include transform(none);}
 	}
 }
