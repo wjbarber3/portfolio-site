@@ -3,8 +3,8 @@
 /* ================== */
 
 header{position:fixed;height:92px;width:100%;z-index:2;transition:all .2s ease-in-out;
-	.main-wrap{width:98%;position:relative;margin:0 auto;height:92px;}
-	a, nav{@include vert-align(50%,-50%);display:inline-block;color:$white;}
+	.main-wrap{width:98%;position:relative;margin:0 auto;height:92px;transition:height .2s ease-in-out;}
+	a, nav{@include vert-align(50%,-50%);display:inline-block;color:$white;transition: all .3s ease-in-out;}
 	nav{float:right;
 		li{display:inline-block;height:25px;position:relative;
 			&:last-of-type a{padding-right:0;border-right:none;}

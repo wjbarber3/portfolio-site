@@ -22,8 +22,8 @@
     <div class="main-wrap">
         <a class="logo" href="/"><img width="54" height="56" src="/wp-content/themes/jordan/img/logo.png" /></a>
         <nav>
-            <li><a href="" onclick="customScroll(event, about, 50);">About</a></li>
-            <li><a href="">Work</a></li>
+            <li><a href="" onclick="customScroll(event, about, 50 );">About</a></li>
+            <li><a class="work-trigger" href="">Work</a></li>
             <li><a href="" onclick="customScroll(event, contact, 45);">Contact</a></li>
             <li><a href="">Web Things<i class="fa fa-caret-down"></i></a>
                 <ul>
@@ -34,3 +34,9 @@
         <a class="mobile-trigger" href="#"><i class="fa fa-bars"></i></a>
     </div>
 </header>
+
+<div id="full-overlay">
+    <i class="fa fa-close close-work"></i>
+    <div id="case-study-container">
+    </div>
+</div>

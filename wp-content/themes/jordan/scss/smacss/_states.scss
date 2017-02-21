@@ -56,7 +56,7 @@ header {
 	@include bp(mobile) {
 		.description, .quotes{width:100%;}
 		.description{
-			.box{ max-width: 85%;right: 0;left: 0;margin: auto;}
+			.box{max-width:85%;right:0;left:0;margin:auto;top:50%;opacity:1;}
 			svg{margin:0 20px 20px 0;}
 		}
 		.quotes {

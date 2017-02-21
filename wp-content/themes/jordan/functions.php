@@ -41,59 +41,60 @@ add_filter( 'body_class', 'add_slug_body_class' );
 //---- REGISTER CUSTOM POST TYPES ------------------//
 //--------------------------------------------------//
 
-// function employees_custom_post_type() {
-//   $labels = [
-//     'name'               => _x( 'Employees', 'post type general name' ),
-//     'singular_name'      => _x( 'Employee', 'post type singular name' ),
-//     'add_new'            => _x( 'Add New Employee', '' ),
-//     'add_new_item'       => __( 'Add New Employee' ),
-//     'edit_item'          => __( 'Edit Employee' ),
-//     'new_item'           => __( 'New Employee' ),
-//     'all_items'          => __( 'All Employees' ),
-//     'view_item'          => __( 'View Employee' ),
-//     'search_items'       => __( 'Search Employees' ),
-//     'not_found'          => __( 'No employees found' ),
-//     'not_found_in_trash' => __( 'No employees found in the Trash' ), 
-//     'parent_item_colon'  => '',
-//     'menu_name'          => 'Employees',
-//  ];
-//   $args = [
-//     'labels'        => $labels,
-//     'description'   => 'Holds our employee information',
-//     'public'        => true,
-//     'menu_position' => 5,
-//     'supports'      => [ 'title', 'editor', 'thumbnail', 'order' ],
-//     'has_archive'   => true,
-//     'rewrite' => [ 'slug' => 'employee' ]
-//   ];
-//   register_post_type( 'employee', $args ); 
-// }
-// add_action( 'init', 'employees_custom_post_type' );
+function case_study_custom_post_type() {
+  $labels = [
+    'name'               => _x( 'Case Studies', 'post type general name' ),
+    'singular_name'      => _x( 'Case Study', 'post type singular name' ),
+    'add_new'            => _x( 'Add New Case Study', '' ),
+    'add_new_item'       => __( 'Add New Case Study' ),
+    'edit_item'          => __( 'Edit Case Study' ),
+    'new_item'           => __( 'New Case Study' ),
+    'all_items'          => __( 'All Case Studies' ),
+    'view_item'          => __( 'View Case Study' ),
+    'search_items'       => __( 'Search Case Studies' ),
+    'not_found'          => __( 'No case studies found' ),
+    'not_found_in_trash' => __( 'No case studies found in the Trash' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Case Studies',
+ ];
+  $args = [
+    'labels'        => $labels,
+    'description'   => 'Holds our Case Study information',
+    'public'        => true,
+    'menu_position' => 5,
+    'supports'      => [ 'title', 'editor', 'thumbnail', 'order' ],
+    'has_archive'   => true,
+    'rewrite' => [ 'slug' => 'case-study' ]
+  ];
+  register_post_type( 'case-study', $args ); 
+  flush_rewrite_rules();
+}
+add_action( 'init', 'case_study_custom_post_type' );
 
 //---------------------------------------//
 //---- REWRITE EMPLOYEE PERMALINKS -----//
 //-------------------------------------//
 
 // Rewrite permalink structure
-// function employee_rewrite() {
+// function case_study_rewrite() {
 //     global $wp_rewrite;
-//     $queryarg = 'post_type=employee&p=';
+//     $queryarg = 'post_type=case-study&p=';
 //     $wp_rewrite->add_rewrite_tag( '%cpt_id%', '([^/]+)', $queryarg );
-//     $wp_rewrite->add_permastruct( 'employee', '/employee/%cpt_id%/', false );
+//     $wp_rewrite->add_permastruct( 'case-study', '/case-study/%cpt_id%/', false );
 // }
-// add_action( 'init', 'employee_rewrite' );
+// add_action( 'init', 'case_study_rewrite' );
 
-// function employee_permalink( $post_link, $id = 0, $leavename ) {
+// function case_study_permalink( $post_link, $id = 0, $leavename ) {
 //     global $wp_rewrite;
 //     $post = &get_post( $id );
 //     if ( is_wp_error( $post ) )
 //         return $post;
-//         $newlink = $wp_rewrite->get_extra_permastruct( 'employee' );
+//         $newlink = $wp_rewrite->get_extra_permastruct( 'case-study' );
 //         $newlink = str_replace( '%cpt_id%', $post->ID, $newlink );
 //         $newlink = home_url( user_trailingslashit( $newlink ) );
 //     return $newlink;
 // }
-// add_filter('post_type_link', 'employee_permalink', 1, 3);
+// add_filter('post_type_link', 'case_study_permalink', 1, 3);
 
 //-----------------------------------//
 //----REGISTER CUSTOM TAXONOMIES-----//

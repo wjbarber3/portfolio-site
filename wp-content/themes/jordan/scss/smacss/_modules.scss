@@ -11,7 +11,7 @@
 /* ==================== */
 
 .opening{width:100vw;height:100vh;background: url("../img/home-bg.jpg") center no-repeat;background-position:center;position:relative;z-index:1;background-attachment:fixed;background-size:cover;
-	.big-logo-container{position:absolute;width:100%;height:100%;background:url("../img/bg-logo.png") center  / 360px 370px no-repeat;background-attachment:fixed;}
+	.big-logo-container{position:absolute;width:100%;height:100%;background:url("../img/bg-logo.png") center  / 360px 370px no-repeat;background-attachment:fixed;@include transform(scale(1));transition:all .1s ease-in-out;}
 	.headline{height:auto;position:absolute;top:48%;@include transform(translateY(-50%));width:80%;left:0;right:0;margin:auto;
 		h1{margin-bottom:2px;}
 		h2{
@@ -72,6 +72,29 @@
 	svg{opacity:0;}
 }
 
+/* ========================= */
+/* === CASE STUDIES GRID === */
+/* ========================= */
+
+#full-overlay{width:100vw;height:100vh;background-color:rgba(0,0,0,.95);z-index:100;position:fixed;display:none;
+	.close-work{position:absolute;right:20px;top:20px;color:$white;z-index:1001;font-size:30px;transition:all .3s ease-in-out;@include transform(scale(1));
+		&:hover{@include transform(scale(1.2));color:$red;cursor:pointer;}
+	}
+}
+#case-study-container{position:relative;height:100%;padding:60px;
+	i{color:$gold;font-size:40px;width:40px;height:40px;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
+	.case-study{text-align:center;
+		.inner{background-size:cover;height:135px;border:1px solid white;padding:30px;z-index:101;position:relative;}
+		.shadow{width:100%;height:100%;position:absolute;top:0;left:0;background-color:rgba(0,0,0,.7);z-index:100;}
+		.case-overlay{position:relative;z-index:101;max-width:75%;margin:0 auto;top:50%;@include transform(translateY(-50%));
+			a{color:$white;border:1px solid $white;padding:8px 12px;
+				&:hover{background-color:$red;}
+			}
+		}
+		h3{margin-bottom:20px;line-height:24px;font-weight:800;}
+	}
+}
+
 /* ==================== */
 /* === ABOUT === */
 /* ==================== */
@@ -80,12 +103,12 @@
 	.description{background-color:$black;width:50%;display:inline-block;height:95%;float:left;height:522px;margin-top:63px;position:relative;
 		.bg-text{font-size:172px;line-height:172px;font-weight:800;position:absolute;right:20px;top:20px;opacity:.05;}
 		h2{font-weight:800;color:$red;margin-bottom:10px;}
-		.box{position:absolute;top:50%;@include transform(translateY(-50%));max-width:62%;right:102px;}
+		.box{position:absolute;top:65%;@include transform(translateY(-50%));max-width:62%;right:102px;opacity:0;transition:all .5s ease-in-out;}
 		p{margin-bottom:20px;}
 		svg{margin:0 20px 0 0;}
 	}
 	.quotes{width:50%;display:inline-block;height:100%;float:left;height:585px;background-image:url('../img/sand.jpg');background-repeat:no-repeat;background-size:cover;position:relative;
-		.quote{position:absolute;left:100px;top:53%;@include transform(translateY(-50%));font-weight:800;font-size:20px;line-height:30px;max-width:75%;z-index:2;display:none;min-height:250px;opacity:0;transition:all .5s ease-in-out;@include exo-italic;
+		.quote{position:absolute;left:100px;top:53%;@include transform(translateY(-50%));font-size:20px;line-height:30px;max-width:75%;z-index:2;display:none;min-height:250px;opacity:0;transition:all .5s ease-in-out;@include exo-italic;
 			&.active{display:block;opacity:1;}
 			span{display: block;font-size:14px;line-height:18px;margin-top:30px;padding-top:13px;border-top:1px solid #CACFC0;width:50%;text-transform:uppercase;font-style:italic;font-weight:300;}
 		}
