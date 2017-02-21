@@ -27,8 +27,8 @@
 		}
 		// .typed-cursor{color:$white;font-size:32px;}
 		span{color:$red;}
-		a{color:$white;margin-top:15px;margin-right:30px;
-			&:hover{color:$gold;border-bottom:2px solid $white;}
+		a{color:$white;margin-top:15px;margin-right:30px;transition:all .3s ease-in-out;
+			&:hover{color:$white;border-bottom:2px solid $white;background: -webkit-linear-gradient($gold, transparent);}
 		}
 	}
 	.social{position:absolute;top:50%;@include transform(translateY(-50%));right:4%;
@@ -75,7 +75,7 @@
 /* === CASE STUDIES GRID === */
 /* ========================= */
 
-#full-overlay{width:100vw;height:100vh;background-color:rgba(0,0,0,.95);z-index:201;position:fixed;display:none;
+#full-overlay{width:100vw;height:100vh;background-color:rgba(0,0,0,.9);z-index:201;position:fixed;display:none;
 	.close-work{position:absolute;right:20px;top:20px;color:$white;z-index:1001;font-size:30px;transition:all .3s ease-in-out;@include transform(scale(1));
 		&:hover{@include transform(scale(1.2));color:$red;cursor:pointer;}
 	}
