@@ -5,17 +5,16 @@
 	<div class="case-<?php echo get_field('short_name'); ?>">
 
 		<div class="hero" style="background-image:url(<?php the_post_thumbnail_url(); ?>);">
-				<div class="shadow"></div>
-				<div class="hero-overlay">
-					<h1 class="large"><?php echo get_field('hero_title'); ?></h1>
-					<h3 class="tagline"><?php echo get_field('tagline'); ?></h3>
-				</div>
-				<div class="project-details">
-					<p class="role"><span>Role </span><?php echo get_field('role'); ?></p>
-					<p class="date"><span>When </span><?php echo get_field('date_completed'); ?></p>
-					<div class="clearfix"></div>
-				</div>		
+			<div class="shadow"></div>
+			<div class="hero-overlay">
+				<h1 class="large"><?php echo get_field('hero_title'); ?></h1>
+				<h3 class="tagline"><?php echo get_field('tagline'); ?></h3>
 			</div>
+			<div class="project-details">
+				<p class="role"><span>Role </span><?php echo get_field('role'); ?></p>
+				<p class="date"><span>When </span><?php echo get_field('date_completed'); ?></p>
+				<div class="clearfix"></div>
+			</div>		
 		</div>
 
 		<div class="mockup">
@@ -35,11 +34,28 @@
 				<div class="color" style="background:<?php the_field('color_three'); ?>"></div>
 				<div class="color" style="background:<?php the_field('color_four'); ?>"></div>
 			</div>
-			<!-- <div class="case-study-tech">
+			<div class="case-study-tech">
 				<h4>Tool/Technology Used</h4>
-			</div> -->
-		</div>
+				<?php
+				// vars	
+$colors = get_field('tools');
 
+
+// check
+if( $colors ): ?>
+<p><?php echo implode('<br>', $colors); ?></p>
+<?php endif; ?>
+
+			</div>
+		</div>
+		<div class="clearfix"></div>
 	</div>
+
+	<!-- <div id="contact">
+		<div class="main-wrap">
+			<h2>Let's Work Together</h2>
+			<?php gravity_form(1, false, false, false, '', true, 12); ?>
+		</div>
+	</div> -->
 
 <?php endwhile; endif; ?>

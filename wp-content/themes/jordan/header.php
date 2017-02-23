@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon-precomposed.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css?family=Exo:300,300i,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:400,400i,800" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 

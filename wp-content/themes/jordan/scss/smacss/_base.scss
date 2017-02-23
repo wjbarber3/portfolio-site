@@ -26,7 +26,6 @@ sup {vertical-align:super;font-size:8px;}
 }
 .secondary-btn{font-size:18px;position:relative;font-weight:800;color:$white;display:inline-block;background-color:$black;padding:15px 25px;border-left:4px solid $gold;
 	&:hover{background-color:$gold;color:$white;}
-	// &:after{content:'';position:absolute;width:24px;height:24px;right:-12px;top:50%;background-image:url('../img/button-arrow.png');background-size: 24px 24px;@include transform(translateY(-50%));}
 }
 
 /* ======================= */

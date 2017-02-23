@@ -217,6 +217,19 @@ if(function_exists("register_field_group"))
                 'preview_size' => 'thumbnail',
                 'library' => 'all',
             ),
+            array (
+                'key' => 'field_58af6d08a39829z',
+                'label' => 'Tools',
+                'name' => 'tools',
+                'type' => 'select',
+                'choices' => array (
+                    'html' => 'HTML',
+                    'css' => 'CSS',
+                ),
+                'default_value' => '',
+                'allow_null' => 0,
+                'multiple' => 1,
+            ),
         ),
         'location' => array (
             array (
@@ -233,6 +246,7 @@ if(function_exists("register_field_group"))
             'position' => 'normal',
             'layout' => 'no_box',
             'hide_on_screen' => array (
+                0 => 'the_content',
             ),
         ),
         'menu_order' => 0,
