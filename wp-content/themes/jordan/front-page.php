@@ -46,7 +46,7 @@
 			<p><i class="fa fa-trophy"></i><span>Bronze Medal </span>- Institution Website</p>
 			<p class="award-title">UCDA Design Conference</p>
 			<p><i class="fa fa-trophy"></i><span>Excellence Award </span>- Admissions Website</p>
-			<a href="#" class="secondary-btn">See the case study</a>
+			<a href="/case-study/university-of-kentucky-academic-exploration-tool" class="secondary-btn">See the case study</a>
 		</div>
 		<div class="col-sm-6 image-container mobile-hide">
 			<img src="/wp-content/themes/jordan/img/kentucky-mockup-angle-1200-opt.png" alt="">

@@ -164,10 +164,12 @@
 
     $(document).ready(function() {
         Header.init();
-        ScrollEvents.init();
         Quotes.init();
         BackgroundAnimation.init();
         CaseStudyOverlay.init();
+        if ( $('body.home').is('*') ) {
+            ScrollEvents.init();
+        }
         $("#contact input, #contact select, #contact textarea").on("focus", function(){
             $(this).parent('.ginput_container').siblings('.gfield_label').css("color", "#ff1940");
             $(this).css("border-color", "#ff1940")
@@ -186,14 +188,4 @@ function customScroll(e, element, offset) {
         scrollTop: jQuery(element).offset().top - offset
     }, 1000);
 }
-
-// function aboutMe() {
-//     jQuery("h2.code").hide();
-//     jQuery("h2.about").fadeIn();
-//     jQuery(".interests3").typed({
-//         strings: ["love to push creative boundaries.", "want to build things that make people's lives easier/better.",  "think that Frank Ocean's 'Blonde' is best music ever made.", "am a devout Cinephile.", "want to work with you."],
-//         typeSpeed: 0,
-//         showCursor: true
-//     });
-// }
 
