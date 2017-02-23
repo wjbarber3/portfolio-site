@@ -8,7 +8,13 @@
 				<div class="shadow"></div>
 				<div class="hero-overlay">
 					<h1 class="large"><?php echo get_field('hero_title'); ?></h1>
-				</div>				
+					<h3 class="tagline"><?php echo get_field('tagline'); ?></h3>
+				</div>
+				<div class="project-details">
+					<p class="role"><span>Role </span><?php echo get_field('role'); ?></p>
+					<p class="date"><span>When </span><?php echo get_field('date_completed'); ?></p>
+					<div class="clearfix"></div>
+				</div>		
 			</div>
 		</div>
 
@@ -23,9 +29,15 @@
 				<h4>Project Info</h4>
 				<p><?php the_field('project_info'); ?></p>
 			</div>
-			<div class="case-study-tech">
-				<h4>Tool/Technology Used</h4>
+			<div class="color-scheme">
+				<div class="color" style="background:<?php the_field('brand_primary_color'); ?>"></div>
+				<div class="color" style="background:<?php the_field('color_two'); ?>"></div>
+				<div class="color" style="background:<?php the_field('color_three'); ?>"></div>
+				<div class="color" style="background:<?php the_field('color_four'); ?>"></div>
 			</div>
+			<!-- <div class="case-study-tech">
+				<h4>Tool/Technology Used</h4>
+			</div> -->
 		</div>
 
 	</div>
