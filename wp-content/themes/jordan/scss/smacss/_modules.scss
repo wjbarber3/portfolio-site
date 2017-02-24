@@ -182,6 +182,23 @@
 				&:first-of-type{margin-left:0px;}
 			}
 		}
+		.case-study-tech-tools{padding:60px;
+			h4{color:$black;font-weight:800;margin-bottom:30px;padding-bottom:15px;border-bottom:4px solid $gold;width:auto;display:inline-block;font-size:24px;}
+			li{color:$black;width:31%;display:inline-block;margin:10px 0;}
+			svg{height:23px;display:inline;max-width:50px;vertical-align:sub;}
+			+ .case-study-tech-tools{padding-top:0px;padding-bottom:80px;}
+			p{font-style:italic;color:$black;}
+		}
+		.next-project{background-color:$black;position:relative;
+			h4{color:$white;padding:10px 20px;background-color:$red;position:absolute;top:-22px;left:60px;font-weight:800;}
+			p{color:$white;}
+			.next-container{padding:60px;width:100%;height:100%;
+				a{color:white;font-weight:800;font-size:36px;line-height:40px;text-decoration:underline;
+					&:hover{opacity:.8;}
+				}
+				span{margin-top:12px;display:block;font-size:18px;@include exo-italic;color:$white;}
+			}
+		}
 	}
 	.case-uk .hero h1.large{font-size:84px;line-height:84px;}
 }
