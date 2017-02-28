@@ -76,8 +76,8 @@
 		a{position:absolute;width:100%;height:100%;top:0;left:0;z-index:200000;cursor:pointer;
 			&:hover + .case-overlay h3{@include transform(scale(1.1));opacity:1;}
 		}
-		.inner{background-size:103%;height:135px;/*border:1px solid white;*/padding:30px;z-index:101;position:relative;}
-		.case-overlay{position:relative;z-index:101;max-width:85%;margin:0 auto;top:50%;@include transform(translateY(-50%));}
+		.inner{background-size:cover;padding:30px;z-index:101;position:relative;background-repeat:no-repeat;background-position:center;min-height:150px;position:relative;}
+		.case-overlay{position:absolute;z-index:101;max-width:85%;margin:0 auto;top:50%;@include transform(translateY(-50%));left:0;right:0;}
 		h3{margin-bottom:15px;line-height:22px;font-weight:800;transition:all .3s ease-in-out;opacity:0;}
 	}
 }

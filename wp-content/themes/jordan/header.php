@@ -26,17 +26,17 @@
                 <li><a href="" onclick="customScroll(event, about, 50 );">About</a></li>
                 <li><a class="work-trigger" href="">Work</a></li>
                 <li><a href="" onclick="customScroll(event, contact, 45);">Contact</a></li>
-                <li><a href="">Web Things<i class="fa fa-caret-down"></i></a>
+                <!-- <li><a href="">Web Things<i class="fa fa-caret-down"></i></a>
                     <ul>
                         <li><a href="/filmic">KinoFiles</a></li>
                     </ul>
-                </li>
+                </li> -->
             <?php else: ?>
                 <li><a class="work-trigger" href="">Work</a></li>
                 <li><a href="/">Head Back Home</a></li>
             <?php endif; ?>
         </nav>
-        <a class="mobile-trigger" href="#"><i class="fa fa-bars"></i></a>
+        <a class="mobile-trigger work-trigger" href="#">Work</a>
     </div>
 </header>
 

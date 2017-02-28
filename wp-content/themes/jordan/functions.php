@@ -14,7 +14,7 @@ add_theme_support( 'post-thumbnails' );
 function jordan_scripts() {
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/compiled_css/main.style.css' , false, filemtime( get_template_directory() . '/compiled_css/main.style.css' ), 'screen' );
 	wp_enqueue_style( 'font_awesome', get_template_directory_uri() . '/font-awesome/font-awesome.min.css' , false, filemtime( get_template_directory() . '/font-awesome/font-awesome.min.css' ), 'screen' );
-	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), filemtime( get_template_directory() . '/js/main.js' ), false );
+	wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.min.js', array('jquery'), filemtime( get_template_directory() . '/js/main.min.js' ), false );
 }
 add_action( 'wp_enqueue_scripts', 'jordan_scripts' );
 
@@ -31,10 +31,6 @@ function add_slug_body_class( $classes ) {
 }
 
 add_filter( 'body_class', 'add_slug_body_class' );
-
-//---------------------------------------------------//
-//---- CUSTOMIZE DASHBOARD WELCOME ------------------//
-//---------------------------------------------------//
 
 //---------------------------------------------------//
 //---- REGISTER CUSTOM POST TYPES ------------------//
@@ -61,14 +57,32 @@ function case_study_custom_post_type() {
     'description'   => 'Holds our Case Study information',
     'public'        => true,
     'menu_position' => 5,
-    'supports'      => [ 'title', 'editor', 'thumbnail', 'order' ],
+    'supports'      => [ 'title', 'editor', 'thumbnail', 'order', 'page-attributes' ],
     'has_archive'   => true,
-    'rewrite' => [ 'slug' => 'case-study' ]
+    'rewrite' => [ 'slug' => 'case-study' ],
+    'hierarchical' => false,
   ];
   register_post_type( 'case-study', $args ); 
   flush_rewrite_rules();
 }
 add_action( 'init', 'case_study_custom_post_type' );
+
+//---------------------------------------------------//
+//---- CUSTOM ORDER CASE STUDIES --------------------//
+//--------------------------------------------------//
+
+function custom_order_case_studies($query) {
+  if ( !is_admin() && $query->is_main_query() ) {
+
+    if (is_post_type_archive('case-study')) {
+      $query->set('orderby', 'date' );
+      $query->set('order', 'ASC' );
+    }
+
+  }
+}
+
+add_action('pre_get_posts','custom_order_case_studies');
 
 //-------------------------------------//
 //---- ADVANCED CUSTOM FIELDS ---------//

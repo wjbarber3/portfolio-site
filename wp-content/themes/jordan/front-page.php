@@ -1,40 +1,21 @@
 <?php get_header(); ?>
 
-<?php
-$codes = [
-		[
-			'headline' => 'SASS',
-			'text'		=> 'As with all CSS preprocessors, SASS should make CSS simple, not more complex. SASS is a very powerful tool for a Front End Developer, especially in conjunction with the technique above. Mixins save time, help with cross-browser compatibility and can be used across projects. Nesting also saves time and greatly enhances readability, but should be used with caution as over-nesting can quickly result in a convoluted stylesheet. It is important to pay attention to the compiled CSS and keep in mind that only developers read SASS, not the browser. Commenting should be used to enhance readability and distinguish the start of new module, layout, or base definitions.'
-		],
-		[
-			'headline' => 'SMACSS',
-			'text'		=> 'I use the SMACCS (Scalable Modular Architecture for CSS) model for my CSS structure. This approach advocates writing modular SASS. Below is a typical setup for this method. In the "variables" file, I define things like color and fonts and custom mixins in the "mixins" file, such as media query definitions. The "layout" file should be used for structural styles that will exist across pages/sections, while the "modules" file is the opposite and should contain the styles specific to components. The "states" file should not be used for simple states like ":hover" and ":focus" (it would not make sense to separate these from thier target) but should instead contain class states that are dynamically added and media queries. Also important to note is the importance of using a styleguide for every site as developing a "living" styleguide will greatly reinforce the structure of your SMACSS (in particular the "modules" file).'
-		],
-		[
-			'headline' => 'Javascript',
-			'text'		=> 'Object-Oriented javascript allows for greater flexibility and easier maintenance. If you take this approach, future phases of projects are much easier to scale. I prefer a modular approach as it encourages reusable code, making components easy to adapt and recycle. I tend to heavily comment my files, even when it seems unnecessary. What may feel redundant as you are writing may not be so obvious when returning to the project later.'
-		],
-	];
-?>
-
 <div class="opening">
 	<div class="big-logo-container"></div>
 	<div class="headline">
 		<h1 class="large">Jordan Barber</h1>
 		<h2>Front End Developer</h2>
 		<h2>Digital Designer</h2>
-		<!-- <h2 class="code" onclick="aboutMe();">$(<span class="code-red">this</span>).<span class="code-gold">on</span>("<span class="code-blue">click</span>", <span class="code-gold">aboutMe</span>());</h2> -->
-		<!-- <h2 class="about">I...<span class="interests3"></span></h2> -->
 		<br>
 		<a href="#" class="main-btn" onclick="customScroll(event, about, 50);">About</a>
 		<a href="#" class="main-btn" onclick="customScroll(event, featured, 45);">Featured Work</a>
-		<a href="/filmic" class="main-btn">KinoFiles</a>
+		<!-- <a href="/filmic" class="main-btn">KinoFiles</a> -->
+		<a href="#" class="main-btn work-trigger">All Work</a>
 	</div>
 	<div class="social">
 		<li><a href="https://twitter.com/topazWindow" target="_blank"><i class="fa fa-twitter"></i></a></li>
 		<li><a href="https://www.linkedin.com/in/jordan-barber-22711037?trk=hp-identity-name" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 		<li><a href="https://github.com/wjbarber3" target="_blank"><i class="fa fa-github"></i></a></li>
-		<!-- <li><a href="http://stackoverflow.com/users/3633970/jordanbarber" target="_blank"><i class="fa fa-stack-overflow"></i></a></li> -->
 		<div class="vertical"></div>
 	</div>
 	<div class="companies">
@@ -116,30 +97,6 @@ $codes = [
 		</div>
 	</div>
 	<div class="clearfix"></div>
-</div>
-
-<div id="code-slider">
-	<div class="wrapper main-wrap">
-		<div class="code-wrap">
-			<?php foreach( $codes as $index=>$code ): ?>
-				<div class="code <?php if($index == 1){ echo 'active'; } ?>">
-					<h2><?php echo $code['headline']; ?></h2>
-					<p class="code-text"><?php echo $code['text']; ?></p>
-				</div>
-			<?php endforeach; ?>
-		</div>
-		<a href="#" class="code-arrow code-left"></a>
-		<a href="#" class="code-arrow code-right"></a>
-		<!-- Mobile Controls -->
-		<ul class="slider-dots">
-			<?php foreach( $codes as $c=>$code ): ?>
-				<li class="
-					<?php if($c == 0){ echo 'active'; } ?>">
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<div class="clearfix"></div>
-	</div>
 </div>
 
 <div id="contact">

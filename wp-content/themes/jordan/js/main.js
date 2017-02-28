@@ -147,7 +147,9 @@
         headline: '.opening .headline',
         companies: '.opening .companies',
         init: function() {
-            $(window).scroll(this.animateLogo.bind(this));
+            if ( $(window).width() > 767 ) {
+                $(window).scroll(this.animateLogo.bind(this));  
+            }
         },
         animateLogo: function() {
             var scrollTop = $(window).scrollTop();
@@ -162,99 +164,11 @@
         }
     }
 
-    CodeSlider = {
-        code: '#code-slider .code',
-        activeCode: '.code.active',
-        codeWrap: '#code-slider .code-wrap',
-        leftTrigger: '#code-slider .code-left',
-        rightTrigger: '#code-slider .code-right',
-        sliderDot: '#code-slider .slider-dots li',
-        init: function() {
-            var self = this;
-            if ( $(window).width() > 767 ) {
-                $('#code-slider .code-left, #code-slider .code-right').show();
-            }
-            $(window).on('resize', function() {
-                if ( $(window).width() < 768 ) {
-                    $('#code-slider .code-left, #code-slider .code-right').hide();
-                } else {
-                    $('#code-slider .code-left, #code-slider .code-right').show();
-                }
-            });
-            $(this.sliderDot).click(this.sliderDots.bind(this));
-            $(this.rightTrigger).click(function(e) {
-                e.preventDefault();
-                clearInterval(autoSlide);
-                self.moveCode('right', '978', 'next');
-            });
-            $(this.leftTrigger).click(function(e) {
-                e.preventDefault();
-                clearInterval(autoSlide);
-                self.moveCode('left', '978', 'prev');
-            });
-            if ( $(window).width() > 977 ) {
-                var autoSlide = setInterval(function(){
-                    self.moveCode('right', '978', 'next');
-                }, 8000);
-            }
-            if ( $(window).width() < 768 ) {
-                $('.code.active').removeClass('active');
-                $(this.code).first().addClass('active');
-            }
-        },
-        moveCode: function(direction, distance, sequence) {
-            $('.code-arrow').css('pointer-events', 'none');
-            var firstCode = $(this.code).first();
-            var lastCode = $(this.code).last();
-            var nextUp = $(this.activeCode)[sequence]();
-            var codeWidth = $(this.code).width();
-            if ( direction == 'right') {
-                move = -(distance*2);
-                var cloneCodes = function() {
-                    firstCode.clone().insertAfter(lastCode);
-                    firstCode.remove();
-                }
-            } else {
-                move = 0;
-                var cloneCodes = function() {
-                    lastCode.clone().insertBefore(firstCode);
-                    lastCode.remove();
-                }
-            }
-            if ( $(window).width() > 977 ) {
-                var updateLeft = -(distance);
-            } else {
-                var updateLeft = '-100vw';
-            }
-            $('.code-wrap').removeClass('no-transition');
-            $('.code-wrap').css('left', move);
-            $(this.activeCode).removeClass('active');
-            nextUp.addClass('active');
-            setTimeout(function(){
-                cloneCodes();
-                $('.code-wrap').addClass('no-transition');
-                $('#code-slider .code-wrap').css('left', updateLeft);
-                $('.code-arrow').css('pointer-events', 'auto');
-            }, 500)
-        },
-        sliderDots: function(e) {
-            var clickedDot = $(e.target);
-            var clickedIndex = clickedDot.index(this.sliderDot);
-            var matchedInfo = clickedIndex + 1;
-            var exponent = clickedIndex * 100;
-            var calcLeft = '-' + exponent + 'vw';
-            $(this.sliderDot).removeClass('active');
-            clickedDot.addClass('active');
-            $('.code-wrap').css('left', calcLeft);
-        }
-    }
-
     $(document).ready(function() {
         Header.init();
         Quotes.init();
         BackgroundAnimation.init();
         CaseStudyOverlay.init();
-        CodeSlider.init();
         if ( $('body.home').is('*') ) {
             ScrollEvents.init();
         }
