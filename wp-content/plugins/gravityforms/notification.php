@@ -1110,6 +1110,14 @@ Class GFNotification {
 
 class GFNotificationTable extends WP_List_Table {
 
+	function get_columns() {
+ $columns = array(
+  'name' => 'Name',
+  'subject' => 'Subject',
+  );
+ return $columns;
+ }
+
 	public $form;
 
 	function __construct( $form ) {

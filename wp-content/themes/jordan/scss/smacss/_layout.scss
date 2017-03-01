@@ -61,3 +61,87 @@ header{position:fixed;height:92px;width:100%;z-index:2;transition:all .2s ease-i
 	0%{opacity:0;}
 	100%{opacity:1;}
 }
+
+@keyframes expand-loader {
+  0% { width: 0; }
+  // 50% { top: 10px; }
+  100% { width: 100%; }
+}
+
+%topLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.opening-wrapper {
+  width: 100%;
+  height: 100%;
+  @extend %topLeft;
+  transform-origin: 50% 50%;
+  animation: rotate 3.16s forwards linear;
+  overflow:hidden;
+}
+
+.bg-line,
+.dot {
+  @extend %topLeft;
+  height: 1px;
+  will-change: transform;
+}
+
+.bg-line {
+  width: 30px;
+  background: rgba($gold, .3);
+  animation: bgLine 2.8s infinite ease-in-out;
+}
+
+.dot {
+  width: 1px;
+  background: lighten(rgba($red, .5), 20%);
+  border-radius: 50%;
+  animation: dot 2.8s infinite ease-in-out;
+}
+
+$qx: 12;
+$qy: 9;
+$current: 0;
+
+// rows
+@for $r from 0 through $qy {
+  // columns
+  @for $c from 0 through $qx {
+    $rnd: random(100) / 100;
+    $current: $current + 1;
+    $top: calc((#{$r} * 100%) / #{$qy} + 50% / #{$qy});
+    $left: (#{$c} * 100%) / #{$qx} ;
+
+    $delay: $rnd * -3s;
+    
+    .bg-line:nth-child(#{$current}),
+    .dot:nth-child(#{$current}) {
+      top: $top;
+      left: calc(#{$left});
+      animation-delay: $delay;
+    }
+    .dot:nth-child(#{$current}) {
+      left: calc(#{$left} + #{$rnd * -40px + 41px});
+    }
+  }
+}
+
+@keyframes bgLine {
+  0%, 100% { opacity: 1; transform: translateX(.5rem) scaleX(.1); }
+  20% { opacity: .5; transform: translateX(.1rem) scaleX(.4); }
+  40% { opacity: 0; transform: translateX(1rem) scaleX(1.2); }
+  60% { opacity: .4; transform: translateX(-.5rem) scaleX(.5); }
+  80% { opacity: .1; transform: translateX(0) scaleX(.8); }
+}
+
+@keyframes dot {
+  0%, 100% { transform: translateX(.5rem); }
+  20% { transform: translateX(.1rem); }
+  40% { transform: translateX(1rem); }
+  60% { transform: translateX(-.5rem); }
+  80% { transform: translateX(0); }
+}

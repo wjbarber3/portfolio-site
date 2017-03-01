@@ -41,6 +41,7 @@
 </header>
 
 <div id="full-overlay">
+    <div id="work-loader"></div>
     <i class="fa fa-close close-work"></i>
     <div id="case-study-container">
     </div>

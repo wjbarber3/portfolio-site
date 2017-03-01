@@ -122,7 +122,7 @@
         container: '#case-study-container',
         trigger: '.work-trigger',
         close: '.close-work',
-        loader: '<i class="fa fa-spin fa-spinner"></i>',
+        loader: '#work-loader',
         init: function() {
             $(this.trigger).click(this.showGrid.bind(this));
             $.ajaxSetup({cache:false});
@@ -130,7 +130,8 @@
         },
         showGrid: function(e) {
             e.preventDefault();
-            $(this.container).append(this.loader);
+            // $(this.container).append(this.loader);
+            $(this.loader).show();
             $(this.container).load("/case-study/");
             $(this.overlay).fadeIn();
             $('body, html').css("overflowY", "hidden");
