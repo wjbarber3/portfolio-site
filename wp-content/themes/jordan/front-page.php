@@ -208,7 +208,7 @@
 		the ground running, and our clients love him. On a scale of 1 to 10,
 		I’d rank him about a 12. <span>Max Donnelly<br>-- Principal, Chronos Interactive</span></p>
 		<p class="quote">Jordan is one of the most talented and hard working front end developers I’ve had the pleasure to work with. His attention to detail is matched only by his passion for the work. He always pushes the boundaries technically and creatively — taking a good idea and making it great. I only wish I got to work with him more.<span>Mark Gerardot<br>-- Creative Director, Up&amp;Up Agency</span></p>
-		<p class="quote">This is a third quote.</p>
+		<p class="quote">I’ve had the pleasure to have Jordan on our consultant team here at The Creative Group for over a year and it is no surprise that he is our most requested and trusted developer. His ability to communicate and guide the development process to find a solution for any type of client is rare; not to mention his technical expertise, work ethic and versatility in front end development and design methodologies make him an invaluable asset on any project.<span>Erin Desrosiers<br>-- Division Director, The Creative Group</span></p>
 		<div class="name-controls">
 			<li class="active"><a href="#"><span>Max Donnelly,</span>Chronos Interactive</a></li>
 			<li><a href="#"><span>Mark Gerardot,</span>Up&amp;Up Agency</a></li>
